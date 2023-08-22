@@ -49,6 +49,7 @@ static const Rule rules[] = {
 	{ "Galculator",      NULL,       NULL,       0,            1,           -1 },
 	{ "battle.net.exe",  NULL,       NULL,       1,            1,           -1 },
 	{ "Lutris",          NULL,       NULL,       0,            1,           -1 },
+	{ "bottles",          NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
