@@ -81,7 +81,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "st", NULL };
 static const char *rofi[]  = { "rofi", "-show", "drun", "-show-icons", "-run-shell-command", NULL };
 static const char *fileman[]  = { "pcmanfm", NULL };
-static const char *browser[]  = { "flatpak", "run", "com.brave.Browser", NULL };
+static const char *browser[]  = { "brave-browser", NULL };
 static const char *screenshot[] = { "scrot", NULL };
 
 #include "movestack.c"
