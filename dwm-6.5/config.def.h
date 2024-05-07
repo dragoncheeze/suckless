@@ -21,6 +21,7 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeTitle]  = { col_gray4, col_gray1,  col_cyan  },
 };
 
 /* Pulseaudio volume sinks (adjust default to whatever device u need controlled) */
@@ -63,7 +64,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -80,6 +81,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *rofi[]  = { "rofi", "-show", "drun", "-show-icons", "-run-shell-command", NULL };
 static const char *fileman[]  = { "pcmanfm", NULL };
 static const char *browser[]  = { "flatpak", "run", "org.mozilla.firefox", NULL };
+static const char *game[]  = { "flatpak", "run", "net.lutris.Lutris", NULL };
 static const char *screenshot[] = { "scrot", NULL };
 
 
@@ -90,6 +92,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = browser } },
+	{ MODKEY,                       XK_g,      spawn,          {.v = game } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = fileman } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = screenshot } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
